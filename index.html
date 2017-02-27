@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+	<title>Restaurant</title>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body ng-app="MenuApp">
+<div>
+	<div >
+      <a ui-sref="home" ui-sref-active="activeTab" class="tabs">Home</a>
+      <a ui-sref="categories" ui-sref-active="activeTab" class="tabs">Menu</a>
+      <!-- <button ui-sref="tab2">Tab 2</button> -->
+    </div>
+    
+    <div class="content">
+    	<ui-view></ui-view>
+    </div>
+	
+
+	 <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- Modules -->
+    <script src="src/MenuAppModule/menuapp.module.js"></script>
+    <script src="src/DataModule/data.module.js"></script>
+
+    <!-- 'MenuApp' module artifacts -->
+    <script src="src/routes.js"></script>
+    <script src="src/MenuAppModule/categories.controller.js"></script>
+    <script src="src/MenuAppModule/categories.component.js"></script>
+    <script src="src/MenuAppModule/items.component.js"></script>
+    <script src="src/MenuAppModule/items.controller.js"></script>
+
+
+    <!-- 'Data' module artifacts -->
+    <script src="src/DataModule/menudata.service.js"></script>
+
+</div>
+</body>
+</html>
